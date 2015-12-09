@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>WSPesquisa Eleitoral</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSPesquisaEleitoralServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSPesquisa Eleitoral</servlet-name>
+		<url-pattern>/wspesquisaeleitoral</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WSEstatisticasCandidatos</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSEstatisticasCandidatosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSEstatisticasCandidatos</servlet-name>
+		<url-pattern>/wsestatisticascandidatos</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WSEstatisticasPoliticos</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSEstatisticasPoliticosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSEstatisticasPoliticos</servlet-name>
+		<url-pattern>/wsestatisticaspoliticos</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WSEstatisticasEleitorado</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSEstatisticasEleitoradoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSEstatisticasEleitorado</servlet-name>
+		<url-pattern>/wsestatisticaseleitorado</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WSAtualizacoes</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSAtualizacoesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSAtualizacoes</servlet-name>
+		<url-pattern>/wsatualizacoes</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WSPauta</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSPautaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSPauta</servlet-name>
+		<url-pattern>/wspauta</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WSApuracaoVotos</servlet-name>
+		<servlet-class>br.com.euPoliticoServlets.WSApuracaoVotosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSApuracaoVotos</servlet-name>
+		<url-pattern>/wsapuracaovotos</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AtualizadorBDApuracaoVotos</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDApuracaoVotos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDApuracaoVotos</servlet-name>
+		<url-pattern>/atualizadorBDApuracaoVotos</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AtualizadorBDAtualizacoes</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDAtualizacoes</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDAtualizacoes</servlet-name>
+		<url-pattern>/atualizadorBDAtualizacoes</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AtualizadorBDPauta</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDPauta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDPauta</servlet-name>
+		<url-pattern>/atualizadorBDPauta</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AtualizadorBDCandidatos</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDEstatisticasCandidatos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDCandidatos</servlet-name>
+		<url-pattern>/atualizadorBDEstatisticasCandidatos</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AtualizadorBDPoliticos</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDEstatisticasPoliticos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDPoliticos</servlet-name>
+		<url-pattern>/atualizadorBDEstatisticasPoliticos</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AtualizadorBDEleitorado</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDEstatisticasEleitorado</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDEleitorado</servlet-name>
+		<url-pattern>/atualizadorBDEstatisticasEleitorado</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AtualizadorBDPesquisaEleitoral</servlet-name>
+		<servlet-class>br.com.euPoliticoAtualizadorBD.AtualizadorBDPesquisaEleitoral</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AtualizadorBDPesquisaEleitoral</servlet-name>
+		<url-pattern>/atualizadorBDPesquisaEleitoral</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
