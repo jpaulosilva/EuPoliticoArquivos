@@ -11,6 +11,11 @@ import br.com.euPoliticoBD.PautaResultado;
 import br.com.euPoliticoBD.PesquisaEleitoralResultado;
 import br.com.euPoliticoConsultaDAO.ConsultaDAO;
 
+/**
+ * 
+ * @author João Paulo
+ * Controlador que contém a chamada a todos os métodos de acesso à classe de consulta ao banco de dados
+ */
 public class Controller {
 
 	public List<PesquisaEleitoralResultado> getPesquisaEleitoral() {

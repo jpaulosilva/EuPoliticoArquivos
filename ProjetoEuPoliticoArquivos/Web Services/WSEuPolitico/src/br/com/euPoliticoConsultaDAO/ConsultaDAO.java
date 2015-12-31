@@ -22,27 +22,38 @@ import br.com.euPoliticoBD.PesquisaEleitoral;
 import br.com.euPoliticoBD.PesquisaEleitoralResultado;
 import br.com.euPoliticoConexaoDAO.PMF;
 
+/**
+ * 
+ * @author João Paulo
+ * Onde as chamadas ao banco de dados são efetuadas	
+ */
 public class ConsultaDAO {
-
+	
+	//Método que retorna uma lista com as Pesquisas Eleitorais
 	public List<PesquisaEleitoralResultado> getPesquisaEleitoral() {
-
+		
+		//Abrindo conexão com o BD
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-
+		
+		//Instaciando uma consulta ao BD
 		Query q = pm.newQuery(PesquisaEleitoral.class);
-
+		
+		//Ordenando o resultado da consulta por "ID", de forma crescente
 		q.setOrdering("id asc");
 
 		List<PesquisaEleitoral> resultSet = null;
 		List<PesquisaEleitoralResultado> resultadoBusca = new ArrayList<>();
 
 		try {
+			//Executando a consulta ao BD
 			resultSet = (List<PesquisaEleitoral>) q.execute();
 
 			if (!resultSet.isEmpty()) {
 				for (PesquisaEleitoral pe : resultSet) {
 
 					PesquisaEleitoralResultado per = new PesquisaEleitoralResultado();
-
+					
+					//Setando o retorno da consulta na classe de resultados
 					per.setId(pe.getId());
 					per.setEstado(pe.getEstado());
 					per.setCidade(pe.getCidade());

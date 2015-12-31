@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.euPoliticoBD.EstatisticasEleitorado;
 import br.com.euPoliticoConexaoDAO.PMF;
 
+/**
+ * 
+ * @author João Paulo
+ * Servlet responsável por atualizar o BD de estatísticas do eleitorado
+ * Acessível por "http://1-dot-wseupolitico.appspot.com/atualizadorBDEstatisticasEleitorado"
+ */
 public class AtualizadorBDEstatisticasEleitorado extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

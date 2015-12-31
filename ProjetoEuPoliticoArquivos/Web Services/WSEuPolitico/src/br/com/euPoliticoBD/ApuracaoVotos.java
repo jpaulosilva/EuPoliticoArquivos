@@ -5,6 +5,11 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+/**
+ * 
+ * @author João Paulo
+ * Banco de dados para apuração de votos
+ */
 @PersistenceCapable
 public class ApuracaoVotos {
 	

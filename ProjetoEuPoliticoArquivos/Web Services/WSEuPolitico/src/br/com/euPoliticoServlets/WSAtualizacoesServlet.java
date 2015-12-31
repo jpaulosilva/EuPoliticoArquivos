@@ -14,6 +14,11 @@ import com.google.gson.GsonBuilder;
 import br.com.euPoliticoBD.AtualizacoesResultado;
 import br.com.euPoliticoControlador.Controller;
 
+/**
+ * 
+ * @author João Paulo
+ * Servlet responsável por acessar o serviço de atualizações
+ */
 public class WSAtualizacoesServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -24,11 +29,15 @@ public class WSAtualizacoesServlet extends HttpServlet {
 		
 		Controller controlador = new Controller();
 		
+		//Chama o método do controlador, retornando um List com os resultados
 		List<AtualizacoesResultado> atualResultado = controlador.getAtualizacoes();
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		
+		//Transforma a lista de resultados em formato JSON
 		String json = gson.toJson(atualResultado);
-
+		
+		//Escreve na resposta do serviço o JSON 
 		ServletUtil.writeJSON(response, json);
 
 	}

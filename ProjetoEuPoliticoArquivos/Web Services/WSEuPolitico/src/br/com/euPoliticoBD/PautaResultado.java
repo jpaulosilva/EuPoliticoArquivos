@@ -1,5 +1,10 @@
 package br.com.euPoliticoBD;
 
+/**
+ * 
+ * @author João Paulo
+ * Classe responsável por armazenar os resultados da consulta ao BD de pautas
+ */
 public class PautaResultado {
 	
 	private String id;

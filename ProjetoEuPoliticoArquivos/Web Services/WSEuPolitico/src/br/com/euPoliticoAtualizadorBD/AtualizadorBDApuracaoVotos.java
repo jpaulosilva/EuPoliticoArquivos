@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.euPoliticoBD.ApuracaoVotos;
 import br.com.euPoliticoConexaoDAO.PMF;
 
+/**
+ * 
+ * @author João Paulo
+ * Servlet responsável por atualizar o BD de apuração de votos
+ * Acessível por "http://1-dot-wseupolitico.appspot.com/atualizadorBDApuracaoVotos"
+ */
 public class AtualizadorBDApuracaoVotos extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

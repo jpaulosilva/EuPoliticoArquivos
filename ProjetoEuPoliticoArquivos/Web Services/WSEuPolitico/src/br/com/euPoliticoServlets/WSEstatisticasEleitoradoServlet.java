@@ -14,6 +14,11 @@ import com.google.gson.GsonBuilder;
 import br.com.euPoliticoBD.EstatisticasEleitoradoResultado;
 import br.com.euPoliticoControlador.Controller;
 
+/**
+ * 
+ * @author João Paulo
+ * Servlet responsável por acessar o serviço de Estatísticas do Eleitorado
+ */
 public class WSEstatisticasEleitoradoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -24,11 +29,15 @@ public class WSEstatisticasEleitoradoServlet extends HttpServlet {
 		
 		Controller controlador = new Controller();
 		
+		//Chama o método do controlador, retornando um List com os resultados
 		List<EstatisticasEleitoradoResultado> estatisticasEleitorado = controlador.getEstatisticasEleitorado();
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		
+		//Transforma a lista de resultados em formato JSON
 		String json = gson.toJson(estatisticasEleitorado);
-
+		
+		//Escreve na resposta do serviço o JSON
 		ServletUtil.writeJSON(response, json);
 
 	}

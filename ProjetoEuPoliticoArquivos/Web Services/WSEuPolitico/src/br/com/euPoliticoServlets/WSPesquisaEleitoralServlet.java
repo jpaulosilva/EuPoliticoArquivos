@@ -14,7 +14,11 @@ import com.google.gson.GsonBuilder;
 import br.com.euPoliticoBD.PesquisaEleitoralResultado;
 import br.com.euPoliticoControlador.Controller;
 
-
+/**
+ * 
+ * @author João Paulo
+ * Servlet responsável por acessar o serviço de Pesquisa Eleitoral
+ */
 public class WSPesquisaEleitoralServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -22,12 +26,16 @@ public class WSPesquisaEleitoralServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		Controller controlador = new Controller();
-
+		
+		//Chama o método do controlador, retornando um List com os resultados das pesquisas eleitorais
 		List<PesquisaEleitoralResultado> pesquisaTotal = controlador.getPesquisaEleitoral();
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		
+		//Transforma a lista de resultados em formato JSON
 		String json = gson.toJson(pesquisaTotal);
-
+		
+		//Escreve na resposta do serviço o JSON
 		ServletUtil.writeJSON(response, json);
 	}
 }

@@ -5,6 +5,11 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+/**
+ * 
+ * @author João Paulo
+ * Banco de dados para as Pautas
+ */
 @PersistenceCapable
 public class Pauta {
 	
